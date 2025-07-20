@@ -1,5 +1,5 @@
 {
-  "name": "my-render-app",
+  "name": "secure-payload-server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
