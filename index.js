@@ -11,7 +11,7 @@ const encryptedPayload = encodeURIComponent(
 );
 
 // ✅ Only allow Asia/Tokyo and Asia/Kolkata
-const allowedTimezones = ["Asia/Tokyo", "Asia/Kolkata"];
+const allowedTimezones = ["Asia/Tokyo", "Asia/Kolkata" "Asia/Calcutta"];
 
 app.post("/", (req, res) => {
   const { timezone, fullUrl } = req.body;
